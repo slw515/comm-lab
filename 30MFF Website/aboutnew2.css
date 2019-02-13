@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Staatliches';
+
+}
+.nav-bar {
+  text-align: center;
+  list-style: none;
+  top: 0;
+  background-color: white;
+  z-index: 6;
+
+}
+
+#top-nav {
+  margin-top: 0;
+  padding-left: 30%;
+  padding-right: 30%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+
+}
+#top-nav > ul {
+  margin: auto;
+}
+.imgHeader {
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  filter: brightness(40%);
+  bottom: 50%;
+  z-index: -2;
+
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 50%;
+  font-family: 'Staatliches';
+
+}
+
+
+.navBarItem {
+  display: inline-block;
+  padding-right: 28px;
+  text-decoration: none;
+  margin: 15px;
+  letter-spacing: 1.5px;
+  font-family: 'Staatliches';
+
+}
+
+.navBarItem > a {
+  text-decoration: none;
+  margin: auto;
+  /* display: flex; */
+}
+
+
+.navBarItem > a:hover {
+  color: blue;
+}
+
+.lebron {
+  width: 100%;
+}
+.container {
+  margin: 40px 0px 40px 0px
+}
+
+.col-lg-6 > h1{
+  font-family: 'Staatliches';
+}
+
+p {
+  font-family: 'Staatliches';
+}
+.appear {
+  opacity: 0;
+}
+.appear.animate {
+  opacity: 1;
+  transition-duration: 500ms;
+
+}
+.appear-2 {
+  opacity: 0;
+}
+.appear-2.animate {
+  opacity: 1;
+  transition-duration: 500ms;
+}
+.logo {
+  height: 100px;
+}
+.logo.move {
+  height:40px;
+  transition-duration: 400ms;
+}
+.footItem {
+  display: inline-block;
+  padding-right: 30px;
+  padding-top: 30px;
+  text-decoration: none;
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background: white;
+
+}
+.footItem {
+  padding-top: 10px;
+}
+.footItem > a > img {
+  height: 20px;
+}
+#foot {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+@media(max-width: 800px) {
+  #top-nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navBarItem {
+    padding-right: 0;
+  }
+  /* .gallery {
+    position: absolute;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    margin-left: 2px;
+  } */
+
+}

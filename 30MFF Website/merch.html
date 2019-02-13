@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sick Steve | Home</title>
+    <link rel="stylesheet" type="text/css" href="registercss.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="register.js"></script>
+
+    <style>
+
+    .icon {
+      display: none;
+    }
+    .shrinknav {
+      display: none;
+    }
+
+
+    @media screen and (max-width: 800px) {
+      .navv li:not(:first-child)  {display: none;}
+      .icon {
+        float: right;
+        display: block;
+        padding: 10px 0px 10px 0px;
+      }
+      .logo {
+        display: none;
+      }
+    }
+  </style>
+  </head>
+  <body>
+
+    <div class="nav-bar">
+      <ul id="top-nav" class="navv">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <img src="hamburger.png" height= "30px"></img>
+        <li class="navBarItem home"><a href="main3.html">Home</a></li>
+        <li class="navBarItem about"><a href="aboutus4.html">About</a></li>
+        <li class="navBarItem" ><a href="main3.html"><img src="sickstevenlogowhitebg.png" class="logo"></a></li>
+        <li class="navBarItem gallery"><a href="">Gallery</a></li>
+        <li class="navBarItem register"><a href="register.html">Register</a></li>
+
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-5">
+          <img src="shirt.jpg" class="img-responsive" height="100%">
+        </div>
+        <div class="col-lg-5">
+          <h1> Black Shirt </h1>
+          <h6> 500 AED </h6>
+          <div class="size">
+            <ul id="size-selection" > <!-- manipulate this; try not to make overflow -->
+              <li class="merchitem"><button type="button" class="btn-sm" id="button3">Small</button></li>
+              <li class="merchitem"><button type="button" class="btn-sm" id="button3">Medium</button></li>
+              <li class="merchitem"><button type="button" class="btn-sm" id="button3">Large</button></li>
+              <!-- <li class="merchitem"><button type="button" class="btn-sm" id="button">Extra Large</button></li> -->
+            </ul>
+          </div>
+          <div class="addbasket">
+            <!-- <button type="button" class="btn-lg" id="button basketButton">Add to Basket</button> -->
+            <button type="button" class="btn-md btn-block" id="button3" onclick="basket()"><strong>Add To Basket<strong></button>
+
+          </div>
+        </div>
+        <!-- <div class="col-lg-2">
+
+        </div> -->
+
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("top-nav");
+      if (x.className === "navv") {
+        x.className += "responsive";
+      } else {
+        x.className = "navv";
+      }
+    }
+
+    </script>
+    </script>
+    <footer>
+      <ul id="foot">
+        <li class="footItem"><a href="#"><img src="instagram.jpg"></a></li>
+        <li class="footItem"><a href="#"><img src="facebook.jpg"></a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

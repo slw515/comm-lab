@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sick Steve | Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="nav-bar">
+      <ul id="top-nav">
+        <li class="navBarItem"><a href="">Home</a></li>
+        <li class="navBarItem"><a href="about2.html">About</a></li>
+        <li class="navBarItem"><a href="main2.html"><img src="sickstevenlogowhitebg.png" height="100px"></a></li>
+        <li class="navBarItem"><a href="">Gallery</a></li>
+
+        <li class="navBarItem"><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+    <video controls>
+      <source src="commlab.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="row">
+        <div class= "col-lg-2">
+
+        </div>
+        <div class= "col-lg-4">
+          <button type="button" class="btn btn-md btn-block btnStyles" id="button">Join Our Mailing List!</button>
+        </div>
+        <div class= "col-lg-4">
+          <button type="button" class="btn btn-md btnStyles" id="button2">Shop Our Official Merchandise!</button>
+        </div>
+        <div class= "col-lg-2">
+
+        </div>
+      </div>
+    </div>
+    <script>
+document.getElementById("button").onclick = function() {
+  window.location.href = "register.html";
+};
+document.getElementById("button2").onclick = function() {
+  window.location.href = "merch.html";
+};
+    </script>
+    <footer>
+      <ul id="foot">
+        <li class="footItem"><a href="#"><img src="instagram.jpg"></a></li>
+        <li class="footItem"><a href="#"><img src="facebook.jpg"></a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
