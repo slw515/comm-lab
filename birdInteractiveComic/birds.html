@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Real Fake Birds of Abu Dhabi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="ninja-slider.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- <script src="ninja-slider.js" type="text/javascript"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+</head>
+<body>
+  <div id="ninja-slider-prev"></div>
+  <div id="ninja-slider-next">hello</div>
+    <div id="ninja-slider">
+        <div class="inner">
+          <h1 id="birdTitle">The Real Fake Birds of Abu Dhabi</h1>
+            <ul><!-- unordered list of different panels of comic. -->
+                <li id="firstOne">
+                  <div class="firstPanel">
+                  <a class="ns-img" id="tweetpic" href="1.png"></a>
+                  <a><img id="pulse" src="pulse.gif"></a>
+                  <a><img class="ns-img" id="finalTweet" src="2.png"></a>
+                  <button id="button1" onclick="tweet(); setTimeout(destroyPulse, 3000);">Click to Unlock</button>
+                </div>
+                </li>
+                <li id="secondPanel">
+                  <a><img class="ns-img" src="panel2loopoff.gif"></a>
+                </li>
+                <li id="thirdPanel">
+                  <a><img class="ns-img" src="crying3.gif"></a>
+                </li>
+                <li id="forthPanel">
+                  <a><img class="ns-img" src="panel5real.gif"></a>
+                </li>
+                <li id="fifthPanel"><!-- crazy fifth panel; render button at beginning (opacity: 0), initiate choice gifs and create buttons to transition to robot scene. create and hide pulses -->
+                  <a><img class="ns-img" src="panel5gif.gif" id="leave"></a>
+                  <button id="button2" onclick="beKind(); setTimeout(renderPulse, 7000);"></button><!-- set timeout to initialize gif-->
+                  <button id="button3" onclick="shit(); setTimeout(renderPulse, 7000);"></button>
+                  <a>
+                    <img class="ns-img" id="shitting" src="crapPanel.gif" style="display: none">
+                  </a>
+                  <a>
+                    <img class="ns-img" id="kindgif" src="panel7kind.gif" style="display: none">
+                  </a> <!---edit this gif-->
+
+                  <a>
+                    <img class="ns-img" id="pulsing" src="pulse.gif" style="height: 35px; width: 35px;">
+                  </a>
+                  <button id="button4" onclick="robot(); setTimeout(fin, 6000); setTimeout(destroyPulse2, 9000);" style="display: none"></button>
+                  <a><img class="ns-img" id="heHears" src="he.gif" style="display: none"></a>
+                </li>
+                <li id="sixthPanel">
+                  <a><img class="ns-img" src="final.png"></a>
+                </li>
+            </ul>
+        </div>
+      <div id="centerThis"> <!-- created to center the slider on screen-->
+        <div id="ninja-slider-pager">
+          <a rel="0" id="firstButton">1
+            <img id="pulsing3" src="pulse.gif"><!-- pulse gif between first and second tabs -->
+          </a>
+          <a rel="1" id="secondButton" onclick="secondActive()">2</a>
+          <a rel="2" id="thirdButton" onclick="thirdActive()">3</a>
+          <a rel= "3" id="fourthButton" onclick="fourthActive()">4</a>
+          <a rel= "4" id="fifthButton" onclick="fifthActive()">4</a>
+            <img class="ns-img" id="pulsing2" src="pulse.gif"> <!-- pulse gif between fifth and sixth tabs -->
+          <a rel= "5" id="sixthButton" onclick="sixthActive()">4</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ninja-slider.js" type="text/javascript"></script>
+</body>
+</html>
