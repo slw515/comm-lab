@@ -36,8 +36,9 @@ body {
   display: flex;
   justify-content: center;
   filter: brightness(40%);
-  bottom: 50%;
+  bottom: 40%;
   z-index: -2;
+  font-family: 'Staatliches';
 
 }
 
@@ -80,10 +81,19 @@ body {
 .col-lg-6 > h1{
   font-family: 'Staatliches';
 }
-
+.atlantic {
+  display: block;
+  justify-content: flex-start;
+}
+.review-text {
+  display: block;
+  text-align: center;
+  font-size: 33px;
+}
 p {
   font-family: 'Staatliches';
 }
+/* add animate classes to both appear containers; */
 .appear {
   opacity: 0;
 }
@@ -118,7 +128,7 @@ footer {
    bottom: 0;
    width: 100%;
    background: white;
-
+   left: 0px;
 }
 .footItem {
   padding-top: 10px;
@@ -132,6 +142,9 @@ footer {
   align-items: center;
   display: flex;
   justify-content: center;
+  bottom: 0;
+  left: 50px;
+  padding-left: 0;
 }
 @media(max-width: 800px) {
   #top-nav {
@@ -141,11 +154,24 @@ footer {
   .navBarItem {
     padding-right: 0;
   }
-  /* .gallery {
-    position: absolute;
-    padding-bottom: 20px;
-    padding-right: 0px;
-    margin-left: 2px;
-  } */
 
+      .icon {
+        display: none;
+      }
+      .shrinknav {
+        display: none;
+      }
+
+
+      @media screen and (max-width: 800px) {
+        .navv li:not(:first-child)  {display: none;} /*icons in column */
+        .icon {
+          float: right;
+          display: block;
+          padding: 10px 0px 10px 0px;
+        }
+        .logo {
+          display: none; /* remove logo  from navbar */
+        }
+      }
 }

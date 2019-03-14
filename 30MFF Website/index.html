@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sick Steve | Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <style> /* not working in CSS file for some reason */
+    button {
+      border: 2px solid black;
+    }
+  </style>
+  </head>
+
+
+  <body>
+<!--- nav bar to be shrunk later, omit image at certain width -->
+    <div class="nav-bar">
+      <ul id="top-nav" class="navv">
+        <a href="#" class="icon" onclick="myFunction()">
+          <img src="hamburger.png" height= "30px"></img>
+        <li class="navBarItem home"><a href="index.html">Home</a></li>
+        <li class="navBarItem about"><a href="aboutus4.html">About</a></li>
+        <li class="navBarItem" ><a href="index.html"><img src="sickstevenlogowhitebg.png" class="logo" height="100px"></a></li>
+        <li class="navBarItem gallery"><a href="merch.html">Store</a></li>
+        <li class="navBarItem register"><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row youtube">
+      <iframe width="560px" height="600px" src="https://www.youtube.com/embed/6G_XgOUiZyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class= "col-lg-2">
+
+        </div>
+        <div class= "col-lg-4">
+          <button type="button" class="btn btn-md btn-block btnStyles" id="button">Join Our Mailing List!</button>
+        </div>
+        <div class= "col-lg-4">
+          <button type="button" class="btn btn-md btn-block btnStyles" id="button2">Shop Our Official Merchandise!</button>
+        </div>
+        <div class= "col-lg-2">
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="row imgRow">
+        <div class= "col-lg-2">
+
+        </div>
+4 column row that  contains face image and smile
+        <div class= "col-lg-4">
+          <img src="emptyface2.png" class="face"></img>
+          <div class="circlesmile"></div>
+        </div>
+        4 column row that  contains pen (must place on left negatively to go into above div) -->
+
+        <!-- <div class= "col-lg-4">
+          <button type="button" class="pen"><img src="pen6.png"></button>
+        </div>
+
+        <div class= "col-lg-2">
+
+    </div>
+  </div>
+</div>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    function myFunction() {
+      var x = document.getElementById("top-nav");
+      if (x.className === "navv") {
+        x.className += "responsive"; /* function designed to create expanding hamburger toolbar, ommitted responsive from CSS and seemed to work fine */
+      } else {
+        x.className = "navv";
+      }
+    }
+document.getElementById("button").onclick = function() {
+  window.location.href = "register.html";
+};
+document.getElementById("button2").onclick = function() {
+  window.location.href = "merch.html"; /* fancy way of adding an href, could have easily done that instead */
+};
+$(".pen").click(function() {
+  $('.circlesmile').addClass('movement');
+  $('.pen').addClass('move'); /* on click, the move class is added to pen, which in CSS file rotates pen and flips sad face to happy */
+
+});
+    </script>
+    <footer>
+      <ul id="foot">
+        <li class="footItem"><a href="#"><img src="instagram.jpg"></a></li>
+        <li class="footItem"><a href="#"><img src="facebook.jpg"></a></li>
+      </ul>
+    </footer>
+
+  </body>
+</html>

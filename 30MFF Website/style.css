@@ -28,14 +28,6 @@ body {
 #top-nav > ul {
   margin: auto;
 }
-/* .imgHeader {
-
-  align-items: center;
-  display: flex;
-  justify-content: center;
-} */
-
-
 .navBarItem {
   display: inline-block;
   padding-right: 25px;
@@ -70,15 +62,18 @@ body {
   height: 120px;
 }
 
-video {
-  height: 70%;
-  width: 50%;
-  padding-top: 140px;
+.youtube {
+  width: 100%;
+  margin-top: 200px;
   display: block;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+.youtube iframe {
+width: 100%;
 }
 .row {
   padding-top: 50px;
@@ -86,17 +81,60 @@ video {
   display: flex;
   justify-content: center;
 }
+.imgRow {
+  padding-top: 70px;
+}
+.circlesmile {
+ width: 40px;
+ height: 40px;
+ border: 5px solid black; /* draw circle (credits to w3 school) */
+ border-radius: 60%;
+ border-bottom-color: transparent; /* halve circle */
+ border-left-color: transparent;
+ transform: rotate(-45deg);
+ position: absolute;
+ top: 123px;
+ left: 110px;
+}
+.circlesmile.movement {
+  transform: rotate(140deg);
+  transition-duration: 400ms;
+}
+
+.pen {
+ position: absolute;
+ top: -100px;
+ left: -200px;
+ border: none;
+ transform: rotate(75deg);
+ height: 70%;
+ width: 70%;
+ outline-style: none;
+ cursor: pointer;
+}
+.pen.move {
+  transform: rotate(50deg);
+  transition-duration: 400ms;
+  outline-style: none;
+
+}
 
 button {
   height: 50px;
   width: 300px;
   font-family: 'Staatliches';
-  background-color: gray;
+  border: 4px solid black;
 }
-.btnStyles {
+.btn {
   font-family: 'Staatliches';
-  background-color: gray;
-  border-style: solid;
+  border: 1px solid black;
+  border-color: black;
+}
+#button {
+  border: 1px solid black;
+}
+#button2 {
+  border: 1px solid black;
 }
 
 .footItem {
@@ -106,13 +144,6 @@ button {
   text-decoration: none;
 }
 
-footer {
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   background: white;
-
-}
 .footItem {
   padding-top: 10px;
 }
@@ -120,60 +151,16 @@ footer {
   height: 20px;
 }
 #foot {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
   align-items: center;
   display: flex;
-  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 48%;
+  right: 48%;
+  width: 100%;
+  background: white;
 }
-/* #prompt {
-  margin: 30px 30px 0 0;
-}
-
-#prompt > img{
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-ul {
-  list-style: none;
-
-}
-#choiceList > ul {
-  margin-left: 40px;
-}
-.saveitems {
-  display: inline-block;
-  padding-right: 160px;
-  padding-top: 30px;
-  text-decoration: none;
-  margin: auto;
-  text-align: center;
-}
-
-.saveitems >img {
-  height: 110px;
-  width: 110px;
-
-} */
-
-/* @media only screen and (max-width: 600px) {
-  #top-nav {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  #top-nav {
-  }
-} */
-
-/* @media only screen and (max-width: 600px) {
-  video{
-    width: 7;
-  }
-} */
-
 
 @media(max-width: 700px) {
     #top-nav {
@@ -191,18 +178,47 @@ ul {
     video {
       height: 100%
     }
-    /* video {
-      padding-top: 400px;
-
-    } */
 }
 @media(max-width: 800px) {
   #top-nav {
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;  /* change nav bar to column, stored inside hamburger icon drop down */
   }
   .navBarItem {
     padding-right: 0;
   }
 
 }
+@media(max-width: 1200px) {
+.pen {
+  display: none;
+}
+.circlesmile { /* remove pen and smile animation for screens below 1200px in width */
+  display: none;
+}
+
+.face {
+  display: none;
+}
+}
+
+
+    .icon {
+      display: none;
+    }
+    .shrinknav {
+      display: none;
+    }
+
+
+    @media screen and (max-width: 800px) {
+      .navv li:not(:first-child)  {display: none;}
+      .icon {
+        float: right; /*icons in column */
+        display: block;
+        padding: 10px 0px 10px 0px;
+      }
+      .logo {
+        display: none; /* remove logo  from navbar */
+      }
+    }
